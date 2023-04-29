@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { getAllCategories } from '../admin/helper/adminapicalls'
+import { getAllCategories, getAllProducts } from '../admin/helper/adminapicalls'
 import { Link, useNavigate } from 'react-router-dom'
 import img from "../magnifying-glass.png"
 import "../styles/FindByCategory.css"
@@ -18,6 +18,17 @@ export default function Search() {
             }
         })
     }
+    // const preload = () => {
+    //     getAllProducts().then(data=>{
+    //         if(data.error){
+    //             console.log(data.error)
+    //         }
+    //         else{
+    //             setValues(data)
+    //         }
+    //     })
+    // }
+    
  
     useEffect(()=>{
         preload()
@@ -25,6 +36,20 @@ export default function Search() {
 
     const [name,setName]= useState("")
     
+    // const Search = (item) => {
+    //     console.log(values)
+    //     for(let i=0;i<values.length;i++){
+    //         if(values[i].name==item){
+    //             console.log("matched");
+    //             console.log(values[i].name);
+    //             console.log(item);
+    //             console.log(values[i]._id);
+    //             return (navigate(`/findByCategory/${values[i]._id}`))
+               
+    //         }
+    //     }
+    // }
+
     const Search = (item) => {
         console.log(values)
         for(let i=0;i<values.length;i++){
@@ -38,8 +63,6 @@ export default function Search() {
             }
         }
     }
-
-   
     const onSubmit = e =>{
         e.preventDefault();
        

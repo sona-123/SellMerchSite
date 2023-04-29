@@ -25,6 +25,32 @@ const Menu = () => {
                 
                 <li className="li-items"><Link to="/cart" className="nav-links">Cart</Link></li>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
                 <li className="li-items"><Link to="/user/dashboard" className="nav-links">Account</Link></li>
 
                 <li className="li-items"><Link to="/admin/dashboard" className="nav-links">Admin </Link></li>
